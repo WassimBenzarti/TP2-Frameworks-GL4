@@ -8,6 +8,7 @@ import {TP1Component} from './ex4/tp1/tp1.component';
 
 
 const routes: Routes = [
+    {path: '', pathMatch: 'full', redirectTo: '1'},
     {path: '1', component: MiniWordComponent},
     {path: '2', component: ArcEnCielViewerComponent},
     {path: '3', component: ClassThemeComponent},

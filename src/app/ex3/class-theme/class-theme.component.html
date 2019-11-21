@@ -1,10 +1,26 @@
-<div>
+<div [ngStyle]="{
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'center'
+}"
+>
     <div *ngFor="let theme of themes">
-        <button (click)="selectTheme(theme)">{{theme | titlecase}}</button>
+        <button
+                [ngStyle]="{
+                    margin:'15px 15px'
+                }"
+                class="btn btn-outline-primary btn-lg" (click)="selectTheme(theme)">{{theme | titlecase}}</button>
     </div>
 
 </div>
-
-<h3 [ngClass]="[selectedTheme]">
-    Hello world this is me!
-</h3>
+<div class="text-center">
+    <h3
+            [ngStyle]="{
+            borderRadius:'10px',
+            padding:'15px',
+            display:'inline-block'
+        }"
+            [ngClass]="[selectedTheme]">
+        Hello world this is me!
+    </h3>
+</div>
