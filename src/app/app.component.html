@@ -1,11 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" [ngStyle]="{fontSize:'30px'}" href="#">
+        <label [ngStyle]="{color: 'white', fontWeight:'600'}">TP2</label>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<app-mini-word></app-mini-word>
-
-<app-arc-en-ciel-viewer></app-arc-en-ciel-viewer>
-<app-class-theme></app-class-theme>
-<app-default-image-viewer></app-default-image-viewer>
-
-<ul>
-    <li *ngFor="let exercice of exercies; let i = index">Exercice {{i}}</li>
-
-</ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li *ngFor="let exercice of exercices; let i = index"
+                [ngStyle]="{
+                    fontWeight:'200',
+                    fontSize:'24px',
+                    margin:'15px'
+                }"
+                class="nav-item">
+                <a [routerLink]="['/',i+1]"
+                   [routerLinkActive]="'active'"
+                   class="nav-link" [ngStyle]="{
+                    color:'white'
+                }">
+                    Exercice {{i + 1}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br/>
+<router-outlet></router-outlet>

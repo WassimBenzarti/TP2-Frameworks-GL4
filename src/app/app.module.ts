@@ -10,6 +10,7 @@ import { ArcEnCielDirective } from './ex2/arc-en-ciel.directive';
 import { ArcEnCielViewerComponent } from './ex2/arc-en-ciel-viewer/arc-en-ciel-viewer.component';
 import { DefaultImageViewerComponent } from './ex5/default-image-viewer/default-image-viewer.component';
 import { MiniWordComponent } from './ex1/mini-word/mini-word.component';
+import { TP1Component } from './ex4/tp1/tp1.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MiniWordComponent } from './ex1/mini-word/mini-word.component';
     ArcEnCielDirective,
     ArcEnCielViewerComponent,
     DefaultImageViewerComponent,
-    MiniWordComponent
+    MiniWordComponent,
+    TP1Component
   ],
   imports: [
     BrowserModule,

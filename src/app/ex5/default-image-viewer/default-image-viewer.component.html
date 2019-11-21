@@ -3,6 +3,6 @@
         <input type="text" name="imagePath" [(ngModel)]="imagePath" />
     </div>
     <div class="col-md-7">
-        <img [src]="imagePath" width="200" />
+        <img [src]="imagePath | defaultImage" width="200" />
     </div>
 </div>
