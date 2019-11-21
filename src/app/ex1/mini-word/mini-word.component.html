@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-light bg-primary">
+    <a class="navbar-brand" [ngStyle]="{fontSize:'30px'}" href="#">
+        <label [ngStyle]="{color: 'white', fontWeight:'600'}">TP2 </label><label [ngStyle]="{color: 'white', fontWeight:'200'}">Exercice 1</label>
+    </a>
+</nav>
+<div class="container" [ngStyle]="{paddingTop : '35px'}">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form-inline" [ngStyle]="{marginBottom : '15px', width: '100%'}">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"  [ngStyle]="{width: '100px', justifyContent: 'center'}" >Colour</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Grey" name="colour" aria-label="Colour" aria-describedby="basic-addon1" [(ngModel)]="colour">
+                </div>
+            </form>
+
+            <form class="form-inline" [ngStyle]="{margin : '15px 0px', width: '100%'}">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"  [ngStyle]="{width: '100px', justifyContent: 'center'}" >Size</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="15" name="size" aria-label="Colour" aria-describedby="basic-addon1" [(ngModel)]="size">
+                </div>
+            </form>
+
+            <form class="form-inline" [ngStyle]="{margin : '15px 0px', width: '100%'}">
+                <div class="form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"  [ngStyle]="{width: '100px', justifyContent: 'center'}" >Font</span>
+                    </div>
+                    <select class="form-control" id="sel1" name="font" [(ngModel)]="font">
+                      <option *ngFor="let item of fonts" [value]="item" >{{item}}</option>
+                    </select>
+                  </div>
+            </form>
+        </div>
+        <div class="col-md-8">
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Type your text Here ..." id="exampleFormControlTextarea3" rows="7" [ngStyle]="{color : colour, fontSize: size + 'px', fontFamily: font, boxShadow : '0px 0px 30px 0px grey'}"></textarea>
+                </div>
+        </div>
+    </div>
+</div>
