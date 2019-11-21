@@ -1,0 +1,10 @@
+<div>
+    <div *ngFor="let theme of themes">
+        <button (click)="selectTheme(theme)">{{theme | titlecase}}</button>
+    </div>
+
+</div>
+
+<h3 [ngClass]="[selectedTheme]">
+    Hello world this is me!
+</h3>

@@ -1,0 +1,15 @@
+.dark{
+    color:white;
+    background-color:#555;
+    font-family: 'Times New Roman', Times, serif;
+}
+.light{
+    color:black;
+    background-color:lightgray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ocean{
+    color:blue;
+    background-color:lightblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
